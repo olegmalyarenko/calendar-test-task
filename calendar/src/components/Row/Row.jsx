@@ -1,8 +1,9 @@
 import React from 'react';
+import './Row.scss';
 
 const Row = ({ left, right }) => {
     return (
-        <div className='row mb2' style={{marginTop:"20px"}}>
+        <div className='content-row'>
                     <div style={{width:"63%"}}> 
                      {left}
                     </div>
