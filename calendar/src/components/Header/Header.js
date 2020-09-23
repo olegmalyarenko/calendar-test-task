@@ -6,7 +6,7 @@ import Navigation from '../Navagation';
 const Header = () => {
   return (
        <div className="header flex">
-        <Icon width="146px" height="27px"/>
+        <Icon width="165px" height="50px" style={{marginTop: "50px"}}/>
         <Navigation />
        </div>
     )

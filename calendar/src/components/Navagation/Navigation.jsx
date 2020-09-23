@@ -3,12 +3,12 @@ import './Navigation.scss';
 
 const Navigation = () => {
     return (
-    <ul class="nav">
-      <li class="nav-item">
+    <ul className="nav">
+      <li className="nav-item">
         <a class="nav-link" href="#">Home</a>
       </li>
-      <li class="nav-item">
-       <a class="nav-link" href="#">About us</a>
+      <li className="nav-item">
+       <a className="nav-link" href="#">About us</a>
       </li>
     </ul>
     )
