@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './Calendar.scss';
 import moment from 'moment';
 import buildCalendar from './Build.js';
-import dayStyles from './styles.js';
+import dayStyles, { beforeToday } from './styles.js';
 
 const Calendar = () => {
     const [ calendar, setCalendar ] = useState([]);
@@ -13,9 +13,34 @@ const Calendar = () => {
 
     }, [value] );
 
+    const currMonthName = () => {
+        return value.format('MMMM');
+    }
+    const currYearName = () => {
+        return value.format('YYYY');
+    }
+    const prevMonth = () => {
+        return value.clone().subtract(1, 'month');
+    }
+    const nextMonth = () => {
+        return value.clone().add(1, 'month');
+    }
+
    
     return (
         <div className="calendar">
+            <div className="calendar__header">
+                <div className="previous"
+                onClick={() => setValue(prevMonth())}>
+                    {String.fromCharCode(171)}</div>
+                
+                <div className="current">
+                    {currMonthName()}{currYearName()}</div>
+                
+                <div className="next"
+                onClick={() => setValue(nextMonth())}>
+                    {String.fromCharCode(187)}</div>
+            </div>
             <div className="calendar__content">
               {calendar.map( week => (
                  <div>{
@@ -27,6 +52,14 @@ const Calendar = () => {
                      </div> 
                     ))
                   } </div>))}
+            </div>
+
+            <div className="calendar__footer">
+                {
+                    ['s','m','t','w','t','f','s'].map( d => (
+                    <div className="week">{d}</div> 
+                    )) 
+                }
             </div>
 
         </div>

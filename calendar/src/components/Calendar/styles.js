@@ -1,7 +1,7 @@
 const isSelected = (value, day) => {
     return value.isSame(day, 'day');
   } 
-  const beforeToday = (day) => {
+  export const beforeToday = (day) => {
       return day.isBefore(new Date(), 'day');
 
   }
