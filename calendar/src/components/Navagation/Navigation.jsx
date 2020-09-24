@@ -1,15 +1,19 @@
 import React from 'react';
 import './Navigation.scss'; 
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 const Navigation = () => {
     return (
     <ul className="nav">
       <li className="nav-item">
-        <Link className="nav-link" to='/'>Home</Link>
+        <NavLink className="nav-link"
+        activeClassName="active" 
+        exact to='/'>Home</NavLink>
       </li>
       <li className="nav-item">
-       <Link className="nav-link" to='/about'>About us</Link>
+       <NavLink className="nav-link" 
+       activeClassName="active"  
+       exact to='/about'>About us</NavLink>
       </li>
     </ul>
     )
