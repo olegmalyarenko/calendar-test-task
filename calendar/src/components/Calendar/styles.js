@@ -1,19 +1,27 @@
-const isSelected = (value, day) => {
+ const isSelected = (value, day) => {
+     console.log('selected', value.isSame(day, 'day'));
     return value.isSame(day, 'day');
   } 
-  export const beforeToday = (day) => {
-      return day.isBefore(new Date(), 'day');
+
+ const currentMonth = (value, day) => {
+     if (isToday(day)) {
+         return;
+     }
+      //return day.format('MMMM') === value.format('MMMM');
+      return day.isSame(value, 'month');
 
   }
 
   const isToday = (day) => {
+      console.log('today' , day.isSame(new Date(), 'day'));
       return day.isSame(new Date(), 'day');
   }
   
   const dayStyles = (day, value) => {
-      if(beforeToday(day)) return 'before';
-      if(isSelected(value, day)) return 'selected';
       if(isToday(day)) return 'today';
+      if(currentMonth(value, day)) return 'current-month';
+      if(isSelected(value, day)) return 'today';
+      
       return ' ';
 
   }
