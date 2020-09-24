@@ -29,3 +29,37 @@
     color: #dfdfdf;
   }
 }
+
+@media (min-width: 900px) and (max-width: 1100px) {
+  .banner {
+    h1 {
+      width: 418px;
+
+      font-size: 40px;
+    }
+  }
+}
+@media (min-width: 540px) and (max-width: 899px) {
+  .banner {
+    height: 550px;
+  }
+}
+
+@media all and (max-width: 539px) {
+  .banner {
+    height: 550px;
+  }
+  .banner {
+    h1 {
+      width: 350px;
+      padding-top: 353px;
+
+      font-size: 30px;
+    }
+    p {
+      width: 350px;
+
+      font-size: 20px;
+    }
+  }
+}

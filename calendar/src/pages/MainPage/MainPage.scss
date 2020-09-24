@@ -2,3 +2,26 @@
   display: flex;
   margin-top: 20px;
 }
+.leftSide {
+  width: 63%;
+}
+.rigthSide {
+  width: 37%;
+}
+
+@media (min-width: 900px) and (max-width: 1300px) {
+  .leftSide,
+  .rigthSide {
+    width: 50%;
+  }
+}
+@media (min-width: 360px) and (max-width: 899px) {
+  .content-row {
+    display: flex;
+    flex-direction: column;
+  }
+  .leftSide,
+  .rigthSide {
+    width: 100%;
+  }
+}

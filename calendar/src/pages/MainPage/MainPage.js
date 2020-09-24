@@ -18,10 +18,10 @@ const MainPage = () => {
 
     return (
         <div className='content-row'>
-                    <div style={{width:"63%"}}> 
+                    <div className="leftSide"> 
                     <Banner/>
                     </div>
-                    <div style={{width:"37%"}}>
+                    <div className="rigthSide">
                     <Calendar 
                     modalValue= {modalValue}
                     modal={modal} 
