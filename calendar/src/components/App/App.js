@@ -3,7 +3,7 @@ import './App.scss';
 import Header from '../Header';
 import Row from '../Row';
 import Banner from '../Banner';
-import Calculator from '../Calculator';
+import Calendar from '../Calendar';
 
 
 const App = () => {
@@ -12,7 +12,7 @@ const App = () => {
       <Header />
       <Row 
        left={<Banner/>} 
-       right={ <Calculator/>}
+       right={ <Calendar/>}
       />
     </div>
   );

@@ -1,0 +1,49 @@
+.calendar {
+  height: 908px;
+
+  background: #272829;
+}
+.calendar__content {
+  box-sizing: border-box;
+  max-width: 400px;
+
+  font-size: 1rem;
+
+  .day {
+    position: relative;
+    z-index: 1;
+
+    display: inline-block;
+    box-sizing: border-box;
+    width: calc(100% / 7);
+    height: 44px;
+    margin: 0;
+    padding: 0;
+
+    text-align: center;
+    color: rgb(240, 240, 240);
+  }
+  .day div {
+    position: relative;
+    z-index: 100;
+
+    width: 54px;
+    height: 44px;
+
+    line-height: 44px;
+    color: rgb(58, 58, 58);
+  }
+
+
+  .day div.before {
+    color: rgb(205, 205, 205);
+  }
+
+
+  .day div.selected {
+    font-weight: bold;
+    color: rgb(240, 240, 240);
+
+    background-color: rgb(206, 36, 36);
+  }
+}
