@@ -1,5 +1,5 @@
  const isSelected = (value, day) => {
-     console.log('selected', value.isSame(day, 'day'));
+    
     return value.isSame(day, 'day');
   } 
 
@@ -13,7 +13,7 @@
   }
 
   const isToday = (day) => {
-      console.log('today' , day.isSame(new Date(), 'day'));
+      
       return day.isSame(new Date(), 'day');
   }
   

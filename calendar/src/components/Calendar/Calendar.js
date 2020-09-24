@@ -4,8 +4,9 @@ import moment from 'moment';
 import buildCalendar from './Build.js';
 import dayStyles from './styles.js';
 import CalendarHeader from '../CalendarHeader';
+import ModalWindow from '../ModalWindow';
 
-const Calendar = () => {
+const Calendar = ({ modal , open, modalValue, close }) => {
     const [ calendar, setCalendar ] = useState([]);
     const [ value, setValue ] = useState(moment());
     
@@ -19,14 +20,15 @@ const Calendar = () => {
    
     return (
         <div className="calendar">
+            { modal && <ModalWindow value={modalValue} close={close} />  }
             <div className="calendar__content">
             <CalendarHeader value={value} setValue={setValue}/>
             <div className="calendar__body">
               {calendar.map( week => (
                  <div className="week-row">{
                    week.map(day => (
-                     <div className="day" onClick={()=> setValue(day)}>
-                        <div key={day.id} className={dayStyles(day, value)}>
+                     <div className="day">
+                        <div key={Math.floor(Math.random()*10000000000)} className={dayStyles(day, value)} onClick={()=> open(day)}>
                          { day.format('DD').toString()}
                         </div> 
                      </div> 
@@ -37,7 +39,7 @@ const Calendar = () => {
             <div className="calendar__footer">
                 {
                     ['s','m','t','w','t','f','s'].map( d => (
-                    <div key={d.id} className="week">{d}</div> 
+                    <div key={Math.floor(Math.random()*10000000000)} className="week">{d}</div> 
                     )) 
                 }
             </div>
