@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import './MainPage.scss';
 import Banner from '../../components/Banner';
 import Calendar from '../../components/Calendar';
-import ModalWindow from '../../components/ModalWindow';
 
 
 const MainPage = () => {

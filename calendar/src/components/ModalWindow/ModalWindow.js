@@ -1,7 +1,6 @@
 import React from 'react'; 
 import './ModalWindow.scss';
 import { ReactComponent as Close } from './close.svg';
-import moment from 'moment';
 
 
 const ModalWindow = ({ value, close }) => {

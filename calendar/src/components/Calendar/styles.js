@@ -1,7 +1,3 @@
- const isSelected = (value, day) => {
-    
-    return value.isSame(day, 'day');
-  } 
 
  const currentMonth = (value, day) => {
      if (isToday(day)) {
@@ -20,7 +16,6 @@
   const dayStyles = (day, value) => {
       if(isToday(day)) return 'today';
       if(currentMonth(value, day)) return 'current-month';
-      if(isSelected(value, day)) return 'today';
       
       return ' ';
 
