@@ -29,21 +29,22 @@ const Calendar = () => {
    
     return (
         <div className="calendar">
+            <div className="calendar__content">
             <div className="calendar__header">
                 <div className="previous"
                 onClick={() => setValue(prevMonth())}>
-                    {String.fromCharCode(171)}</div>
+                    {String.fromCharCode(60)}</div>
                 
                 <div className="current">
-                    {currMonthName()}{currYearName()}</div>
+                    {currMonthName()} {currYearName()}</div>
                 
                 <div className="next"
                 onClick={() => setValue(nextMonth())}>
-                    {String.fromCharCode(187)}</div>
+                    {String.fromCharCode(62)}</div>
             </div>
-            <div className="calendar__content">
+            <div className="calendar__body">
               {calendar.map( week => (
-                 <div>{
+                 <div className="week">{
                    week.map(day => (
                      <div className="day" onClick={()=> setValue(day)}>
                         <div className={dayStyles(day, value)}>
@@ -60,6 +61,7 @@ const Calendar = () => {
                     <div className="week">{d}</div> 
                     )) 
                 }
+            </div>
             </div>
 
         </div>
