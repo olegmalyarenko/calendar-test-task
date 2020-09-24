@@ -1,0 +1,23 @@
+@import "../../variables.scss"; 
+
+.about {
+  max-width: 1336px;
+  margin: 0 15%;
+  h2 {
+    margin-top: 98.7px;
+
+    font-weight: 700;
+    font-size: 34px;
+    font-family: $font;
+    color: rgba(61, 61, 61, 1);
+  }
+  p {
+    margin-top: 78px;
+
+    font-weight: 300;
+    font-size: 20px;
+    font-family: $font;
+    color: rgba(61, 61, 61, 1);
+    letter-spacing: 0.4px;
+  }
+}
