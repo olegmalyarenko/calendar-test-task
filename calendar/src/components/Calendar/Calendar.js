@@ -48,7 +48,7 @@ const Calendar = () => {
                    week.map(day => (
                      <div className="day" onClick={()=> setValue(day)}>
                         <div className={dayStyles(day, value)}>
-                         { day.format('D').toString()}
+                         { day.format('DD').toString()}
                         </div> 
                      </div> 
                     ))
