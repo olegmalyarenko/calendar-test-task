@@ -46,3 +46,56 @@
 
   background: rgba(253, 208, 0, 1);
 }
+@media (min-width: 901px) and (max-width: 1350px) {
+  .modal-window {
+    position: fixed;
+    top: 30%;
+    left: 35%;
+  }
+}
+@media (min-width: 551px) and (max-width: 900px) {
+  .modal-window {
+    position: fixed;
+    top: 30%;
+    left: 25%;
+
+    width: 50%;
+    height: 250px;
+  }
+  .modal-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    padding-top: 20px;
+  }
+  .form-group input::placeholder {
+    font-size: 18px;
+  }
+}
+@media (min-width: 250px) and (max-width: 550px) {
+  .modal-window {
+    position: fixed;
+    top: 30%;
+    left: auto;
+
+    width: 50%;
+    height: 250px;
+    padding-top: 0;
+    padding-left: 30px;
+  }
+  .modal-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+  }
+  .form-group input {
+    width: 85%;
+  }
+  .form-group input::placeholder {
+    font-size: 15px;
+  }
+}
