@@ -25,10 +25,10 @@ const Calendar = ({ modal , open, modalValue, close }) => {
             <CalendarHeader value={value} setValue={setValue}/>
             <div className="calendar__body">
               {calendar.map( week => (
-                 <div key={Math.floor(Math.random()*10000000000)} className="week-row">{
+                 <div key={Date.now() + Math.random()} className="week-row">{
                    week.map(day => (
-                     <div key={Math.floor(Math.random()*10000000000)} className="day">
-                        <div key={Math.floor(Math.random()*10000000000)} className={dayStyles(day, value)} onClick={()=> open(day)}>
+                     <div key={Date.now() + Math.random()} className="day">
+                        <div key={Date.now() + Math.random()} className={dayStyles(day, value)} onClick={()=> open(day)}>
                          { day.format('DD').toString()}
                         </div> 
                      </div> 
@@ -39,7 +39,7 @@ const Calendar = ({ modal , open, modalValue, close }) => {
             <div className="calendar__footer">
                 {
                     ['s','m','t','w','t','f','s'].map( d => (
-                    <div key={Math.floor(Math.random()*10000000000)} className="week">{d}</div> 
+                    <div key={Date.now() + Math.random()} className="week">{d}</div> 
                     )) 
                 }
             </div>
