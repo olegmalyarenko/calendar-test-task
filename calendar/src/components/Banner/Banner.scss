@@ -1,6 +1,8 @@
 
 @import "../../variables.scss";
 .banner {
+  position: relative;
+
   height: 908px;
   padding-right: 33px;
 
@@ -20,8 +22,12 @@
     letter-spacing: 3.5px;
   }
   p {
-    float: right;
+    position: absolute;
+    top: 320px;
+    right: 0;
+
     width: 554px;
+    padding-right: 33px;
 
     font-weight: 300;
     font-size: 30px;
@@ -36,6 +42,9 @@
       width: 418px;
 
       font-size: 40px;
+    }
+    p {
+      width: 420px;
     }
   }
 }
@@ -57,9 +66,13 @@
       font-size: 30px;
     }
     p {
+      position: absolute;
+      top: 430px;
+
       width: 350px;
 
       font-size: 20px;
     }
   }
 }
+

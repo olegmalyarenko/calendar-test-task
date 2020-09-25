@@ -15,7 +15,7 @@
     width: 50%;
   }
 }
-@media (min-width: 360px) and (max-width: 899px) {
+@media all and (max-width: 899px) {
   .content-row {
     display: flex;
     flex-direction: column;
