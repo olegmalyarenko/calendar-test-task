@@ -1,0 +1,28 @@
+@import "../../variables.scss";
+
+
+.side-menu {
+  position: fixed;
+  top: 0;
+  z-index: 600;
+
+  width: 60%;
+  height: 100%;
+  margin: 0 auto;
+
+  background: white;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.mobile-nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+.side-menu svg {
+  margin: 11px 15px 9px;
+}

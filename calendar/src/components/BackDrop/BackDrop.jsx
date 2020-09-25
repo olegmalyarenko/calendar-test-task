@@ -1,10 +1,10 @@
 import React from 'react';
 import './BackDrop.scss';
 
-const BackDrop = () => {
+const BackDrop = ({closeMobileMenu}) => {
     
     return ( 
-      <div className="backgrop"/> 
+      <div className="backgrop" onClick={() => closeMobileMenu()}/> 
     )
 };
 
