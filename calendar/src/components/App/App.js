@@ -11,14 +11,14 @@ import BackDrop from '../BackDrop';
 const App = () => {
   const [ mobileMenu, setMobileMenu ] = useState(false);
   const closeMobileMenu = () => {
-    setMobileMenu(false);
+    setMobileMenu(!mobileMenu);
   }
   
   return (
     <div className="App">
       <Header  setMobileMenu={setMobileMenu}/>
       { mobileMenu && <SideMenu closeMobileMenu={closeMobileMenu} /> }
-      { mobileMenu && <BackDrop closeMobileMenu={closeMobileMenu} /> }
+      { mobileMenu && <BackDrop /> }
       <Switch>
         <Route exact path='/' component={MainPage}/>
         <Route path='/about' component={About}/>

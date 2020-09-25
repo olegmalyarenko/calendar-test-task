@@ -13,12 +13,12 @@ const ModalWindow = ({ value, close }) => {
         </div>
         <form className="modal-form">
           <div className="form-group">
-           <label for="monthInput">Month</label>
+           <label htmlFor="monthInput">Month</label>
            <input type="text" className="form-control" id="monthInput" placeholder={value ? value.format('MMMM') : null }/>
           </div>
    
           <div className="form-group">
-           <label for="dateInput">Day</label>
+           <label htmlFor="dateInput">Day</label>
            <input type="text" className="form-control" id="dateInput" placeholder={value ? value.format('Do dddd') : null }/>
           </div>
   
