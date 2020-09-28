@@ -18,7 +18,7 @@ const App = () => {
     <div className="App">
       <Header  setMobileMenu={setMobileMenu}/>
       { mobileMenu && <SideMenu closeMobileMenu={closeMobileMenu} /> }
-      { mobileMenu && <BackDrop /> }
+      { mobileMenu && <BackDrop  mobileMenu={mobileMenu} closeMobileMenu={closeMobileMenu} /> }
       <Switch>
         <Route exact path='/' component={MainPage}/>
         <Route path='/about' component={About}/>

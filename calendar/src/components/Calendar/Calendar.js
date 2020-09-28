@@ -20,7 +20,7 @@ const Calendar = ({ modal , open, modalValue, close }) => {
     return (
         <div className="calendar">
             { modal && <ModalWindow value={modalValue} close={close} /> }
-             { modal && <BackDrop /> }
+             { modal && <BackDrop  modal={modal} close={close} /> }
             <div className="calendar__content">
             <CalendarHeader value={value} setValue={setValue}/>
             <div className="calendar__body">

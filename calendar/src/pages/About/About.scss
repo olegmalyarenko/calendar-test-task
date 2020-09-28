@@ -2,9 +2,10 @@
 
 .about {
   max-width: 1336px;
+  height: 80vh;
   margin: 0 15%;
   h2 {
-    margin-top: 98.7px;
+    margin-top: 50px;
 
     font-weight: 700;
     font-size: 34px;
@@ -12,12 +13,25 @@
     color: rgba(61, 61, 61, 1);
   }
   p {
-    margin-top: 78px;
+    margin-top: 50px;
 
     font-weight: 300;
     font-size: 20px;
     font-family: $font;
     color: rgba(61, 61, 61, 1);
     letter-spacing: 0.4px;
+  }
+}
+
+
+@media (min-width: 1050px) and (max-width: 1700px) {
+  .about p {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 799px) and (max-width: 1049px) {
+  .about p {
+    font-size: 15px;
   }
 }
