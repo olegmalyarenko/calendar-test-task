@@ -11,6 +11,9 @@ html,
 .App {
   height: 100%;
 }
+body {
+  overflow-y: hidden;
+}
 
 li {
   list-style: none;
